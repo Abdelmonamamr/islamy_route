@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/ui/utils/app_colors.dart';
 
-abstract class AppTextStyle {
+abstract final class AppTextStyle {
   static const gold16w400 = TextStyle(
       color: AppColors.gold, fontSize: 16, fontWeight: FontWeight.w400);
   static const gold24w700 = TextStyle(
