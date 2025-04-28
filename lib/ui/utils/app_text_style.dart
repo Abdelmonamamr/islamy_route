@@ -12,12 +12,17 @@ abstract final class AppTextStyle {
       color: AppColors.gold, fontSize: 16, fontWeight: FontWeight.w700);
   static const white16w700 = TextStyle(
       color: AppColors.white, fontSize: 16, fontWeight: FontWeight.w700);
+  static const white14w700 = TextStyle(
+      color: AppColors.white, fontSize: 14, fontWeight: FontWeight.w700);
   static const white36w700 = TextStyle(
       color: AppColors.white, fontSize: 36, fontWeight: FontWeight.w700);
   static const white32w700 = TextStyle(
       color: AppColors.white, fontSize: 32, fontWeight: FontWeight.w700);
   static const white20w700 = TextStyle(
-      color: AppColors.white, fontSize: 20, fontWeight: FontWeight.w700);
+      color: AppColors.white,
+      fontSize: 20,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'Janna LT');
   static const white12w700 = TextStyle(
       color: AppColors.white, fontSize: 12, fontWeight: FontWeight.w700);
   static const black24w700 = TextStyle(

@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:islamy/ui/model/sura.dart';
 import 'package:islamy/ui/screens/splash/splash.dart';
+import 'package:islamy/ui/utils/constants.dart';
 
 void main() {
+  for (int i = 0; i < Constants.arabicQuranSuras.length; i++) {
+    Constants.suras.add(
+      Sura(
+          nameAr: Constants.arabicQuranSuras[i],
+          nameEn: Constants.englishQuranSuras[i],
+          numVerses: Constants.numVersrs[i],
+          suraNum: i + 1),
+    );
+  }
   runApp(const MyApp());
 }
 
