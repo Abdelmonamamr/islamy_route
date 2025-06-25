@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/ui/model/sura.dart';
-import 'package:islamy/ui/screens/sura_details/sura_details.dart';
+import 'package:islamy/ui/screens/home/taps/quran/most_recent_sura.dart';
 import 'package:islamy/ui/utils/app_assets.dart';
 import 'package:islamy/ui/utils/app_colors.dart';
 import 'package:islamy/ui/utils/app_routs.dart';
@@ -38,10 +38,15 @@ class _QuranTapState extends State<QuranTap> {
             height: 10,
           ),
           Text(
+            'Most Recently',
+            style: AppTextStyle.white16w700,
+          ),
+          MostRecentSura(),
+          Text(
             'Sura List',
             style: AppTextStyle.white16w700,
           ),
-          buildSuraListView(),
+          BuildSuraListView(),
         ],
       ),
     );
@@ -79,7 +84,7 @@ class _QuranTapState extends State<QuranTap> {
     );
   }
 
-  Widget buildSuraListView() {
+  Widget BuildSuraListView() {
     return Expanded(
         child: ListView.separated(
       itemCount: filteredSuraList.length,
