@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/ui/model/sura.dart';
+import 'package:islamy/ui/screens/on_boarding/on_boarding.dart';
 import 'package:islamy/ui/screens/splash/splash.dart';
 import 'package:islamy/ui/utils/constants.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: OnBoarding(),
     );
   }
 }

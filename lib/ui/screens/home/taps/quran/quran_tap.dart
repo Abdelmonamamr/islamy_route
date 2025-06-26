@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/ui/model/sura.dart';
-import 'package:islamy/ui/screens/home/taps/quran/most_recent_sura.dart';
 import 'package:islamy/ui/utils/app_assets.dart';
 import 'package:islamy/ui/utils/app_colors.dart';
 import 'package:islamy/ui/utils/app_routs.dart';
@@ -33,26 +32,26 @@ class _QuranTapState extends State<QuranTap> {
             AppAssets.islamyLogo,
             width: 5,
           ),
-          BuildSearchTextFiled(),
+          buildSearchTextFiled(),
           SizedBox(
             height: 10,
           ),
-          Text(
-            'Most Recently',
-            style: AppTextStyle.white16w700,
-          ),
-          MostRecentSura(),
+          // Text(
+          //   'Most Recently',
+          //   style: AppTextStyle.white16w700,
+          // ),
+          // MostRecentSura(),
           Text(
             'Sura List',
             style: AppTextStyle.white16w700,
           ),
-          BuildSuraListView(),
+          buildSuraListView(),
         ],
       ),
     );
   }
 
-  BuildSearchTextFiled() {
+  Widget buildSearchTextFiled() {
     var border = OutlineInputBorder(
         borderSide: BorderSide(
           color: AppColors.gold,
@@ -84,11 +83,11 @@ class _QuranTapState extends State<QuranTap> {
     );
   }
 
-  Widget BuildSuraListView() {
+  Widget buildSuraListView() {
     return Expanded(
         child: ListView.separated(
       itemCount: filteredSuraList.length,
-      itemBuilder: (context, index) => BulidSuraRow(context, index),
+          itemBuilder: (context, index) => buildSuraRow(context, index),
       separatorBuilder: (__, _) => Divider(
         thickness: 2,
         indent: 42,
@@ -97,7 +96,7 @@ class _QuranTapState extends State<QuranTap> {
     ));
   }
 
-  Widget BulidSuraRow(BuildContext context, index) {
+  Widget buildSuraRow(BuildContext context, index) {
     var sura = filteredSuraList[index];
     return InkWell(
       onTap: () {
@@ -123,7 +122,7 @@ class _QuranTapState extends State<QuranTap> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '${sura.nameEn}',
+                  sura.nameEn,
                   style: AppTextStyle.white20w700,
                 ),
                 SizedBox(
@@ -137,7 +136,7 @@ class _QuranTapState extends State<QuranTap> {
             ),
           ),
           Text(
-            '${sura.nameAr}',
+            sura.nameAr,
             style: AppTextStyle.white20w700,
           )
         ],
