@@ -20,5 +20,6 @@ abstract class AppAssets {
   static final on4 = '${_baseImages}on4.png';
   static final on5 = '${_baseImages}on5.png';
   static final sephaHead = '${_baseImages}sepha_head.png';
-  static final sephaBody = '${_baseImages}sepha_body.png';
+  static final sephaBody = '${_baseImages}sebha_body.png';
+  static final sephaBackground = '${_baseImages}sepha_background.png';
 }
